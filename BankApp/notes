@@ -1,0 +1,47 @@
+Data Binding 
+-Share data inside the component
+
+1.One way Binding (data sharing only 1 direction)
+
+    ts- component
+    html- view
+
+    1.1 component to view (ts-> html) 
+        a) String interpolation - {{expression}}
+        b) property binding -[attribute_name]='property binding'
+    1.2 view to component (htmt -> ts)
+
+        a) Event binding -(event_name)="function_name()"
+        b)Event binding using $event -(event_name)="function_name($event)"
+        c)Event binding using template referencing variable - #variable_name
+
+2.Two way binding
+
+    [(ngModel)]="property name"
+
+
+    Angular Routing
+    ---------------
+    to set path for a component
+
+        {
+            path=value,component:class_name
+        }
+        app-routing.module.ts
+
+    Dependancy Injection
+    ---------------------
+    to Share data between two dependent classes
+
+    Angular Service
+    ----------------
+    to hold redundant data (duplicate data)
+        -ng g s service_name
+
+    FRONT END AND BACK END INTEGRATION
+    HTTPCLIENT MODULE- http request 
+
+    rxjs -reactive extension for javascript - to solve asynchoronous angular request
+    1)observable -alternate to javascript promise
+        => subscribe - resolve
+        => catch - reject

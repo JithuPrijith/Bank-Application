@@ -1,0 +1,17 @@
+<h2 class="text-center text-primary">Transaction</h2>
+<table>
+    <thead>
+        <tr>
+          <th scope="col">Type</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of transaction">
+            <th>{{data.type}}</th>
+            <th>{{data.amount}}</th>
+          </tr>
+      </tbody>
+  
+</table>
+<p class="text-center"><a class="btn btn-primary mt-5" routerLink="/home-page">Home</a></p>

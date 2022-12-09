@@ -1,0 +1,84 @@
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden">
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+        <p class="float-right"><button class="btn btn-danger" (click)="logout()">Logout</button><button class="btn btn-danger" (click)="delete()">delete</button></p>
+        <p class="float-left">system data and time : {{systemData | date}}</p>
+        <p class="float-left">system data and time : {{systemData | date}} </p>
+        <h1>welcome {{user}}</h1>
+        <div>
+            <a class="btn btn-primary" routerLink="/transaction">Transaction history</a>
+            <app-delete [item]="inputAcno" (onCancel) = "poda()" (onDelete)="ondelete($event)"></app-delete>
+        </div>
+        <div [ngClass]="inputAcno?'style1':''" class="row gx-lg-5 align-items-center mb-5 justify-content-between">
+            
+
+            <div class="card bg-glass col-5">
+                <h3>DEPOSIT</h3>
+                <div class="card-body px-4 py-5 px-md-5">
+                    <form>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="depo_username" class="form-control" [(ngModel)]="acno"
+                                name="name" placeholder="Enter your name" />
+                        </div>
+
+
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="depo_acno" name="acno" class="form-control" [(ngModel)]="password"
+                                placeholder="Enter your password" />
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="depo_amount" name="pswd" [(ngModel)]="amount"
+                                placeholder="Enter your amount" class="form-control" />
+                        </div>
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4" (click)="deposit()">
+                            Deposit
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <div class="card bg-glass col-5">
+                <h3>WITHDRAW</h3>
+                <div class="card-body px-4 py-5 px-md-5">
+                    <form>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="with_username" class="form-control" [(ngModel)]="acno1"
+                                name="name" placeholder="Enter your name" />
+                        </div>
+
+
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="with_acno" name="acno" class="form-control" [(ngModel)]="password1"
+                                placeholder="Enter your account number" />
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="with_pwsd" name="pswd" [(ngModel)]="amount1"
+                                placeholder="Enter your password" class="form-control" />
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4" (click)="withdraw()">
+                            Withdraw
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->
